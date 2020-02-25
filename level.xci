@@ -1,0 +1,278 @@
+#Tic Tac Toe Level
+
+init
+tiles 0 15 4  1 0 0 0 0 0 0 0 1
+tiles 0 15 5  1 0 0 0 0 0 0 0 1
+tiles 0 15 6  1 0 0 0 0 0 0 0 1
+tiles 0 15 7  1 0 0 0 0 0 0 0 1
+tiles 0 15 8  1 0 0 0 0 0 0 0 1
+tiles 0 15 9  1 0 0 0 0 0 0 0 1
+tiles 0 8 10  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+tiles 0 15 11  1 0 0 0 0 0 0 0 1
+tiles 0 15 12  1 0 0 0 0 0 0 0 1
+tiles 0 15 13  1 0 0 0 0 0 0 0 1
+tiles 0 15 14  1 0 0 0 0 0 0 0 1
+tiles 0 15 15  1 0 0 0 0 0 0 0 1
+tiles 0 15 16  1 0 0 0 0 0 0 0 1
+tiles 0 8 17  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+tiles 0 15 18  1 0 0 0 0 0 0 0 1
+tiles 0 15 19  1 0 0 0 0 0 0 0 1
+tiles 0 15 20  1 0 0 0 0 0 0 0 1
+tiles 0 15 21  1 0 0 0 0 0 0 0 1
+tiles 0 15 22  1 0 0 0 0 0 0 0 1
+tiles 0 15 23  1 0 0 0 0 0 0 0 1
+text 1 Welcome to Tic-Tac-Toe. You Go first.
+end_anim
+
+# Cell 1 - upper left
+tool_trigger use 8 4  14 9
+clear_state done
+if_not c1
+   tiles 0 9 5   2  2HV 0   2V  2H
+   tiles 0 10 6     2   3   2H
+   tiles 0 10 7     2V  3V  2HV
+   tiles 0 9 8   2V 2H  0   2   2HV
+   set_state c1
+   set_state p1
+   if p5
+      if c9
+         if p2
+            if_not c3
+               tiles 0 25 5  4   5   6   5H  4H
+               tiles 0 25 6  7   8   0   8H  7H
+               tiles 0 25 7  7V  8V  0   8HV 7HV
+               tiles 0 25 8  4V  5V  6V  5HV 4HV
+               set_state c3
+               set_state done
+            end_if
+         end_if
+         if_not c2
+            if p3
+               tiles 0 17 5  4   5   6   5H  4H
+               tiles 0 17 6  7   8   0   8H  7H
+               tiles 0 17 7  7V  8V  0   8HV 7HV
+               tiles 0 17 8  4V  5V  6V  5HV 4HV
+               set_state c2
+               set_state done
+            end_if
+         end_if
+         if_not done
+            if p4
+               if_not c7
+                  tiles 0 9 18  4   5   6   5H  4H
+                  tiles 0 9 19  7   8   0   8H  7H
+                  tiles 0 9 20  7V  8V  0   8HV 7HV
+                  tiles 0 9 21  4V  5V  6V  5HV 4HV
+                  set_state c7
+                  set_state done
+               end_if
+            end_if
+            if_not c4
+               if p7
+                  tiles 0 9 12  4   5   6   5H  4H
+                  tiles 0 9 13  7   8   0   8H  7H
+                  tiles 0 9 14  7V  8V  0   8HV 7HV
+                  tiles 0 9 15  4V  5V  6V  5HV 4HV
+                  set_state c4
+                  set_state done
+               end_if
+            end_if
+         end_if
+      end_if
+      if_not c9
+         tiles 0 25 18  4   5   6   5H  4H
+         tiles 0 25 19  7   8   0   8H  7H
+         tiles 0 25 20  7V  8V  0   8HV 7HV
+         tiles 0 25 21  4V  5V  6V  5HV 4HV
+         set_state c9
+         set_state_done
+      end_if
+   end_if
+   if_not c5
+      tiles 0 17 12  4   5   6   5H  4H
+      tiles 0 17 13  7   8   0   8H  7H
+      tiles 0 17 14  7V  8V  0   8HV 7HV
+      tiles 0 17 15  4V  5V  6V  5HV 4HV
+      set_state c5
+      set_state done
+   end_if
+   if_not done
+      if p2
+         if_not c3
+            tiles 0 25 5  4   5   6   5H  4H
+            tiles 0 25 6  7   8   0   8H  7H
+            tiles 0 25 7  7V  8V  0   8HV 7HV
+            tiles 0 25 8  4V  5V  6V  5HV 4HV
+            set_state c3
+            set_state done
+         end_if
+      end_if
+      if_not c2
+         if p3
+            tiles 0 17 5  4   5   6   5H  4H
+            tiles 0 17 6  7   8   0   8H  7H
+            tiles 0 17 7  7V  8V  0   8HV 7HV
+            tiles 0 17 8  4V  5V  6V  5HV 4HV
+            set_state c2
+            set_state done
+         end_if
+      end_if
+      if_not done
+         if p4
+            if_not c7
+               tiles 0 9 18  4   5   6   5H  4H
+               tiles 0 9 19  7   8   0   8H  7H
+               tiles 0 9 20  7V  8V  0   8HV 7HV
+               tiles 0 9 21  4V  5V  6V  5HV 4HV
+               set_state c7
+               set_state done
+            end_if
+         end_if
+         if_not c4
+            if p7
+               tiles 0 9 12  4   5   6   5H  4H
+               tiles 0 9 13  7   8   0   8H  7H
+               tiles 0 9 14  7V  8V  0   8HV 7HV
+               tiles 0 9 15  4V  5V  6V  5HV 4HV
+               set_state c4
+               set_state done
+            end_if
+         end_if
+      end_if
+   end_if
+   if_not done
+      if_not c3
+         tiles 0 25 5  4   5   6   5H  4H
+         tiles 0 25 6  7   8   0   8H  7H
+         tiles 0 25 7  7V  8V  0   8HV 7HV
+         tiles 0 25 8  4V  5V  6V  5HV 4HV
+         set_state c3
+         set_state_done
+      end_if
+   end_if
+   if_not done
+      if_not c7
+         tiles 0 9 18  4   5   6   5H  4H
+         tiles 0 9 19  7   8   0   8H  7H
+         tiles 0 9 20  7V  8V  0   8HV 7HV
+         tiles 0 9 21  4V  5V  6V  5HV 4HV
+         set_state c7
+         set_state_done
+      end_if
+   end_if
+   if_not done
+      if_not c9
+         tiles 0 25 18  4   5   6   5H  4H
+         tiles 0 25 19  7   8   0   8H  7H
+         tiles 0 25 20  7V  8V  0   8HV 7HV
+         tiles 0 25 21  4V  5V  6V  5HV 4HV
+         set_state c9
+         set_state_done
+      end_if
+   end_if
+   if_not done
+      if_not c2
+         tiles 0 17 5  4   5   6   5H  4H
+         tiles 0 17 6  7   8   0   8H  7H
+         tiles 0 17 7  7V  8V  0   8HV 7HV
+         tiles 0 17 8  4V  5V  6V  5HV 4HV
+         set_state c2
+         set_state done
+      end_if
+   end_if
+   if_not done
+      if_not c4
+         tiles 0 9 12  4   5   6   5H  4H
+         tiles 0 9 13  7   8   0   8H  7H
+         tiles 0 9 14  7V  8V  0   8HV 7HV
+         tiles 0 9 15  4V  5V  6V  5HV 4HV
+         set_state c4
+         set_state_done
+      end_if
+   end_if
+   if_not done
+      if_not c6
+         tiles 0 25 12  4   5   6   5H  4H
+         tiles 0 25 13  7   8   0   8H  7H
+         tiles 0 25 14  7V  8V  0   8HV 7HV
+         tiles 0 25 15  4V  5V  6V  5HV 4HV
+         set_state c6
+         set_state done
+      end_if
+   end_if
+   if_not done
+      if_not c8
+         tiles 0 25 18  4   5   6   5H  4H
+         tiles 0 25 19  7   8   0   8H  7H
+         tiles 0 25 20  7V  8V  0   8HV 7HV
+         tiles 0 25 21  4V  5V  6V  5HV 4HV
+         set_state c9
+         set_state_done
+      end_if
+   end_if
+   if_not done
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
+   end_if
+end_if
+end_anim
+
+# Cell 2 - upper center
+tool_trigger use 16 4  22 9
+if_not c2
+
+end_if
+end_anim
+
+# Cell 3 - upper right
+tool_trigger use 24 4  30 9
+if_not c3
+
+end_if
+end_anim
+
+# Cell 4 - middle left
+tool_trigger use 8 10  14 15
+if_not c4
+
+end_if
+end_anim
+
+# Cell 5 - middle center
+tool_trigger use 16 10  22 15
+if_not c5
+
+end_if
+end_anim
+
+# Cell 6 - middle right
+tool_trigger use 24 10  30 5
+if_not c6
+
+end_if
+end_anim
+
+# Cell 7 - lower left
+tool_trigger use 8 17  14 22
+if_not c7
+   if p5
+
+   end_if
+end_if
+end_anim
+
+# Cell 8 - lower center
+tool_trigger use 16 17  22 22
+if_not c8
+
+end_if
+end_anim
+
+# Cell 9 - lower right
+tool_trigger use 24 17  30 22
+if_not c9
+
+end_if
+end_anim

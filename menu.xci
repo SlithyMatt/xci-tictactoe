@@ -1,0 +1,28 @@
+# menu.xci
+
+menu_bg 1         # menu text background color = white
+menu_fg 0         # menu text foreground color = black
+menu_lc 1         # Plain white square
+menu_sp 1         # Plain white square
+menu_rc 1         # Plain white square
+menu_div 1        # Plain white square
+
+menu Game
+menu_item new
+menu_item exit
+
+
+# text styles
+text1_bg 0 # text style 1 background color = black
+text1_fg 1 # text style 1 foreground color = white
+text2_bg 0
+text2_fg 7 # yellow
+text3_bg 0
+text3_fg 14 # light blue
+
+# Toolbar definition
+tb_dim 4 1
+tool use
+tool_tiles 80 76 65 89 # Just ASCII "PLAY"
+
+use 0    # Default cursor
