@@ -303,17 +303,17 @@ if_not x1
             go_level 0 1
          end_if
          if x3
-            if x6
+            if x7
+               set_state o4
+               go_level 0 0
+            end_if
+            if x8
                set_state o2
                go_level 0 0
             end_if
-            if x4
-               set_state 08
-               set_state center_line
-               go_level 0 1
-            end_if
-            set_state o4
-            go_level 0 0
+            set_state o8
+            set_state center_line
+            go_level 0 1
          end_if
          if x4
             set_state o3
@@ -450,7 +450,7 @@ if_not x2
          end_if
          if x3
             if x5
-               set_state o6
+               set_state o8
                go_level 0 0
             end_if
             set_state o1
@@ -640,7 +640,12 @@ if_not x3
             set_state slope_down_line
             go_level 0 1
          end_if
-         set_state o6
+         if x7
+            set_state o6
+            set_state middle_line
+            go_level 0 1
+         end_if
+         set_state o4
          set_state middle_line
          go_level 0 1
       end_if
@@ -666,13 +671,174 @@ if_not x4
          go_level 0 0
       end_if
       if second
-
+         if x1
+            set_state o7
+            go_level 0 0
+         end_if
+         if x2
+            set_state o3
+            go_level 0 0
+         end_if
+         if x3
+            set_state o8
+            go_level 0 0
+         end_if
+         if x5
+            set_state o6
+            go_level 0 0
+         end_if
+         if x9
+            set_state o2
+            go_level 0 0
+         end_if
+         set_state o1
+         go_level 0 0
       end_if
       if third
-
+         if x1
+            if x2
+               set_state o7
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x6
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o7
+               go_level 0 0
+            end_if
+            set_state o8
+            set_state center_line
+            go_level 0 1
+         end_if
+         if x2
+            if x5
+               set_state o6
+               go_level 0 0
+            end_if
+            if x7
+               set_state o1
+               go_level 0 0
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x3
+            if x5
+               set_state o6
+               go_level 0 0
+            end_if
+            if x6
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o2
+            go_level 0 0
+         end_if
+         if x5
+            if x8
+               set_state o3
+               set_state top_line
+               go_level 0 1
+            end_if
+            set_state o2
+            set_state top_line
+            go_level 0 1
+         end_if
+         if x6
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o7
+            set_state slope_up_line
+            go_level 0 1
+         end_if
+         if x7
+            if x8
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o3
+         set_state slope_up_line
+         go_level 0 1
       end_if
       if fourth
-
+         if x1
+            if x3
+               if x8
+                  set_state o9
+                  go_level 0 0
+               end_if
+            end_if
+            if x9
+               set_state o3
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            set_state o8
+            go_level 0 0
+         end_if
+         if x2
+            if x8
+               set_state o3
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x5
+               if x3
+                  set_state o9
+                  set_state bottom_line
+                  go_level 0 1
+               end_if
+               set_state o6
+               go_level 0 0
+            end_if
+            set_state o7
+            go_level 0 0
+         end_if
+         if x3
+            if x6
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o1
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x5
+            set_state o6
+            go_level 0 0
+         end_if
+         if x6
+            if x9
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o1
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         set_state o1
+         go_level 0 0
       end_if
       tiles 0  9 12   2  2HV 0   2V  2H
       tiles 0 10 13      2   3   2H
@@ -705,13 +871,187 @@ if_not x6
          go_level 0 0
       end_if
       if second
-
+         if x1
+            set_state o8
+            go_level 0 0
+         end_if
+         if x2
+            set_state o1
+            go_level 0 0
+         end_if
+         if x3
+            set_state o9
+            go_level 0 0
+         end_if
+         if x4
+            set_state o1
+            go_level 0 0
+         end_if
+         if x5
+            set_state o4
+            go_level 0 0
+         end_if
+         if x7
+            set_state o2
+            go_level 0 0
+         end_if
+         set_state o3
+         go_level 0 0
       end_if
       if third
-
+         if x1
+            if x2
+               set_state o7
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x4
+               set_state o3
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x7
+               set_state o2
+               go_level 0 0
+            end_if
+            set_state o8
+            set_state center_line
+            go_level 0 1
+         end_if
+         if x2
+            if x4
+               set_state o7
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x5
+               set_state o4
+               go_level 0 0
+            end_if
+            if x9
+               set_state o3
+               go_level 0 0
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x3
+            if x4
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x5
+               set_state o4
+               set_state left_line
+               go_level 0 1
+            end_if
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o9
+            go_level 0 0
+         end_if
+         if x4
+            if x9
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x5
+            if x8
+               set_state o3
+               set_state top_line
+               go_level 0 1
+            end_if
+            set_state o2
+            set_state top_line
+            go_level 0 1
+         end_if
+         if x7
+            if x8
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o3
+         set_state slope_up_line
+         go_level 0 1
       end_if
       if fourth
-
+         if x1
+            if x3
+               if x4
+                  set_state o8
+                  set_state center_line
+                  go_level 0 1
+               end_if
+               set_state o9
+               go_level 0 0
+            end_if
+            if x7
+               set_state o2
+               go_level 0 0
+            end_if
+            if x9
+               set_state o3
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            set_state o8
+            go_level 0 0
+         end_if
+         if x2
+            if x4
+               set_state o9
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            if x5
+               if x9
+                  if_not o4
+                     set_state o4
+                     go_level 0 0
+                  end_if
+                  set_state o7
+                  set_state left_line
+                  go_level 0 1
+               end_if
+               set_state o4
+               go_level 0 0
+            end_if
+            set_state o3
+            go_level 0 0
+         end_if
+         if x3
+            if x5
+               set_state o4
+               set_state left_line
+               go_level 0 1
+            end_if
+            set_state o1
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x7
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o3
+         set_state slope_up_line
+         go_level 0 1
       end_if
       tiles 0 25 12   2  2HV 0   2V  2H
       tiles 0 26 13      2   3   2H
@@ -735,12 +1075,176 @@ if_not x7
          go_level 0 0
       end_if
       if second
-
+         if x1
+            set_state o4
+            go_level 0 0
+         end_if
+         if x2
+            set_state o6
+            go_level 0 0
+         end_if
+         if x4
+            set_state o1
+            go_level 0 0
+         end_if
+         if x5
+            set_state o3
+            go_level 0 0
+         end_if
+         if x8
+            set_state o9
+            go_level 0 0
+         end_if
+         if x9
+            set_state o8
+            go_level 0 0
+         end_if
+         set_state o2
+         go_level 0 0
       end_if
       if third
-
+         if x1
+            if x2
+               set_state o4
+               go_level 0 0
+            end_if
+            if x6
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o8
+            set_state center_line
+            go_level 0 1
+         end_if
+         if x2
+            if x4
+               set_state o1
+               go_level 0 0
+            end_if
+            if x5
+               set_state o3
+               go_level 0 0
+            end_if
+            if x9
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x3
+            if x4
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x6
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o4
+            set_state middle_line
+            go_level 0 1
+         end_if
+         if x4
+            if x5
+               set_state o3
+               go_level 0 0
+            end_if
+            if x9
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x5
+            if x9
+               set_state o2
+               set_state top_line
+               go_level 0 1
+            end_if
+            set_state o3
+            go_level 0 0
+         end_if
+         if x8
+            set_state o9
+            go_level 0 0
+         end_if
+         set_state o8
+         go_level 0 0
       end_if
       if fourth
+         if x1
+            if x3
+               if x6
+                  set_state o8
+                  set_state center_line
+                  go_level 0 1
+               end_if
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o4
+            go_level 0 0
+         end_if
+         if x2
+            if x3
+               if x4
+                  set_state o9
+                  set_state slope_down_line
+                  go_level 0 1
+               end_if
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x5
+               if o3
+                  set_state o4
+                  go_level 0 0
+               end_if
+               set_state o3
+               go_level 0 0
+            end_if
+            set_state o8
+            go_level 0 0
+         end_if
+         if x3
+            if x8
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o8
+            set_state center_line
+            go_level 0 1
+         end_if
+         if x4
+            set_state o2
+            set_state top_line
+            go_level 0 1
+         end_if
+         if x5
+
+         end_if
 
       end_if
       tiles 0  9 19   2  2HV 0   2V  2H
