@@ -21,863 +21,795 @@ tiles 0 15 20  1 0 0 0 0 0 0 0 1
 tiles 0 15 21  1 0 0 0 0 0 0 0 1
 tiles 0 15 22  1 0 0 0 0 0 0 0 1
 tiles 0 15 23  1 0 0 0 0 0 0 0 1
-if c1
-   if p1
-      tiles 0 9 5   2  2HV 0   2V  2H
-      tiles 0 10 6     2   3   2H
-      tiles 0 10 7     2V  3V  2HV
-      tiles 0 9 8   2V 2H  0   2   2HV
-   end_if
-   if_not p1
-      tiles 0 9 5  4   5   6   5H  4H
-      tiles 0 9 6  7   8   0   8H  7H
-      tiles 0 9 7  7V  8V  0   8HV 7HV
-      tiles 0 9 8  4V  5V  6V  5HV 4HV
-      set_state o1
-   end_if
+if x1
+   tiles 0 9 5   2  2HV 0   2V  2H
+   tiles 0 10 6     2   3   2H
+   tiles 0 10 7     2V  3V  2HV
+   tiles 0 9 8   2V 2H  0   2   2HV
 end_if
-if c2
-   if p2
-      tiles 0 17 5  2   2HV 0   2V  2H
-      tiles 0 18 6      2   3   2H
-      tiles 0 18 7      2V  3V  2HV
-      tiles 0 17 8  2V  2H  0   2   2HV
-   end_if
-   if_not p2
-      tiles 0 17 5  4   5   6   5H  4H
-      tiles 0 17 6  7   8   0   8H  7H
-      tiles 0 17 7  7V  8V  0   8HV 7HV
-      tiles 0 17 8  4V  5V  6V  5HV 4HV
-      set_state o2
-   end_if
+if o1
+   tiles 0 9 5  4   5   6   5H  4H
+   tiles 0 9 6  7   8   0   8H  7H
+   tiles 0 9 7  7V  8V  0   8HV 7HV
+   tiles 0 9 8  4V  5V  6V  5HV 4HV
 end_if
-if c3
-   if p3
+if x2
+   tiles 0 17 5  2   2HV 0   2V  2H
+   tiles 0 18 6      2   3   2H
+   tiles 0 18 7      2V  3V  2HV
+   tiles 0 17 8  2V  2H  0   2   2HV
+end_if
+if o2
+   tiles 0 17 5  4   5   6   5H  4H
+   tiles 0 17 6  7   8   0   8H  7H
+   tiles 0 17 7  7V  8V  0   8HV 7HV
+   tiles 0 17 8  4V  5V  6V  5HV 4HV
+end_if
+if x3
    tiles 0 25 5  2   2HV 0   2V  2H
    tiles 0 26 6      2   3   2H
    tiles 0 26 7      2V  3V  2HV
    tiles 0 25 8  2V  2H  0   2   2HV
-   end_if
-   if_not p3
-      tiles 0 25 5  4   5   6   5H  4H
-      tiles 0 25 6  7   8   0   8H  7H
-      tiles 0 25 7  7V  8V  0   8HV 7HV
-      tiles 0 25 8  4V  5V  6V  5HV 4HV
-      set_state o3
-      if o1
-         if o2
-            set_state top_line
-            go_level 0 1
-         end_if
-      end_if
-   end_if
 end_if
-if c4
-   if p4
-      tiles 0  9 12   2  2HV 0   2V  2H
-      tiles 0 10 13      2   3   2H
-      tiles 0 10 14      2V  3V  2HV
-      tiles 0  9 15   2V 2H  0   2   2HV
-   end_if
-   if_not p4
-      tiles 0 9 12  4   5   6   5H  4H
-      tiles 0 9 13  7   8   0   8H  7H
-      tiles 0 9 14  7V  8V  0   8HV 7HV
-      tiles 0 9 15  4V  5V  6V  5HV 4HV
-      set_state o4
-   end_if
-end_if
-if c5
-   if p5
-      tiles 0 17 12   2  2HV 0   2V  2H
-      tiles 0 18 13      2   3   2H
-      tiles 0 18 14      2V  3V  2HV
-      tiles 0 17 15   2V 2H  0   2   2HV
-   end_if
-   if_not p5
-      tiles 0 17 12  4   5   6   5H  4H
-      tiles 0 17 13  7   8   0   8H  7H
-      tiles 0 17 14  7V  8V  0   8HV 7HV
-      tiles 0 17 15  4V  5V  6V  5HV 4HV
-      set_state o5
-   end_if
-end_if
-if c6
-   if p6
-      tiles 0 25 12   2  2HV 0   2V  2H
-      tiles 0 26 13      2   3   2H
-      tiles 0 26 14      2V  3V  2HV
-      tiles 0 25 15   2V 2H  0   2   2HV
-   end_if
-   if_not p6
-      tiles 0 25 12  4   5   6   5H  4H
-      tiles 0 25 13  7   8   0   8H  7H
-      tiles 0 25 14  7V  8V  0   8HV 7HV
-      tiles 0 25 15  4V  5V  6V  5HV 4HV
-      set_state o6
-      if o4
-         if o5
-            set_state middle_line
-            go_level 0 1
-         end_if
-      end_if
-   end_if
-end_if
-if c7
-   if p7
-      tiles 0  9 19   2  2HV 0   2V  2H
-      tiles 0 10 20      2   3   2H
-      tiles 0 10 21      2V  3V  2HV
-      tiles 0  9 22   2V 2H  0   2   2HV
-   end_if
-   if_not p7
-      tiles 0 9 19  4   5   6   5H  4H
-      tiles 0 9 20  7   8   0   8H  7H
-      tiles 0 9 21  7V  8V  0   8HV 7HV
-      tiles 0 9 22  4V  5V  6V  5HV 4HV
-      set_state o7
-      if o1
-         if o4
-            set_state left_line
-            go_level 0 1
-         end_if
-      end_if
-      if o3
-         if o5
-            set_state slope_up_line
-            go_level 0 1
-         end_if
-      end_if
-   end_if
-end_if
-if c8
-   if p8
-      tiles 0 17 19   2  2HV 0   2V  2H
-      tiles 0 18 20      2   3   2H
-      tiles 0 18 21      2V  3V  2HV
-      tiles 0 17 22   2V 2H  0   2   2HV
-   end_if
-   if_not p8
-      tiles 0 17 19  4   5   6   5H  4H
-      tiles 0 17 20  7   8   0   8H  7H
-      tiles 0 17 21  7V  8V  0   8HV 7HV
-      tiles 0 17 22  4V  5V  6V  5HV 4HV
-      set_state o8
+if o3
+   tiles 0 25 5  4   5   6   5H  4H
+   tiles 0 25 6  7   8   0   8H  7H
+   tiles 0 25 7  7V  8V  0   8HV 7HV
+   tiles 0 25 8  4V  5V  6V  5HV 4HV
+   if o1
       if o2
-         if o5
-            set_state center_line
-            go_level 0 1
-         end_if
+         set_state top_line
+         go_level 0 1
       end_if
    end_if
 end_if
-if c9
-   if p9
-      tiles 0 25 19   2  2HV 0   2V  2H
-      tiles 0 26 20      2   3   2H
-      tiles 0 26 21      2V  3V  2HV
-      tiles 0 25 22   2V 2H  0   2   2HV
+if x4
+   tiles 0  9 12   2  2HV 0   2V  2H
+   tiles 0 10 13      2   3   2H
+   tiles 0 10 14      2V  3V  2HV
+   tiles 0  9 15   2V 2H  0   2   2HV
+end_if
+if o4
+   tiles 0 9 12  4   5   6   5H  4H
+   tiles 0 9 13  7   8   0   8H  7H
+   tiles 0 9 14  7V  8V  0   8HV 7HV
+   tiles 0 9 15  4V  5V  6V  5HV 4HV
+end_if
+if x5
+   tiles 0 17 12   2  2HV 0   2V  2H
+   tiles 0 18 13      2   3   2H
+   tiles 0 18 14      2V  3V  2HV
+   tiles 0 17 15   2V 2H  0   2   2HV
+end_if
+if o5
+   tiles 0 17 12  4   5   6   5H  4H
+   tiles 0 17 13  7   8   0   8H  7H
+   tiles 0 17 14  7V  8V  0   8HV 7HV
+   tiles 0 17 15  4V  5V  6V  5HV 4HV
+end_if
+if x6
+   tiles 0 25 12   2  2HV 0   2V  2H
+   tiles 0 26 13      2   3   2H
+   tiles 0 26 14      2V  3V  2HV
+   tiles 0 25 15   2V 2H  0   2   2HV
+end_if
+if o6
+   tiles 0 25 12  4   5   6   5H  4H
+   tiles 0 25 13  7   8   0   8H  7H
+   tiles 0 25 14  7V  8V  0   8HV 7HV
+   tiles 0 25 15  4V  5V  6V  5HV 4HV
+   if o4
+      if o5
+         set_state middle_line
+         go_level 0 1
+      end_if
    end_if
-   if_not p9
-      tiles 0 25 19  4   5   6   5H  4H
-      tiles 0 25 20  7   8   0   8H  7H
-      tiles 0 25 21  7V  8V  0   8HV 7HV
-      tiles 0 25 22  4V  5V  6V  5HV 4HV
-      if o1
-         if o5
-            set_state slope_down_line
-            go_level 0 1
-         end_if
-      end_if
-      if o3
-         if o6
-            set_state right_line
-            go_level 0 1
-         end_if
-      end_if
-      if o7
-         if o8
-            set_state bottom_line
-            go_level 0 1
-         end_if
+end_if
+if x7
+   tiles 0  9 19   2  2HV 0   2V  2H
+   tiles 0 10 20      2   3   2H
+   tiles 0 10 21      2V  3V  2HV
+   tiles 0  9 22   2V 2H  0   2   2HV
+end_if
+if o7
+   tiles 0 9 19  4   5   6   5H  4H
+   tiles 0 9 20  7   8   0   8H  7H
+   tiles 0 9 21  7V  8V  0   8HV 7HV
+   tiles 0 9 22  4V  5V  6V  5HV 4HV
+   if o1
+      if o4
+         set_state left_line
+         go_level 0 1
       end_if
    end_if
+   if o3
+      if o5
+         set_state slope_up_line
+         go_level 0 1
+      end_if
+   end_if
+end_if
+if x8
+   tiles 0 17 19   2  2HV 0   2V  2H
+   tiles 0 18 20      2   3   2H
+   tiles 0 18 21      2V  3V  2HV
+   tiles 0 17 22   2V 2H  0   2   2HV
+end_if
+if o8
+   tiles 0 17 19  4   5   6   5H  4H
+   tiles 0 17 20  7   8   0   8H  7H
+   tiles 0 17 21  7V  8V  0   8HV 7HV
+   tiles 0 17 22  4V  5V  6V  5HV 4HV
+   set_state o8
+   if o2
+      if o5
+         set_state center_line
+         go_level 0 1
+      end_if
+   end_if
+end_if
+if x9
+   tiles 0 25 19   2  2HV 0   2V  2H
+   tiles 0 26 20      2   3   2H
+   tiles 0 26 21      2V  3V  2HV
+   tiles 0 25 22   2V 2H  0   2   2HV
+end_if
+if o9
+   tiles 0 25 19  4   5   6   5H  4H
+   tiles 0 25 20  7   8   0   8H  7H
+   tiles 0 25 21  7V  8V  0   8HV 7HV
+   tiles 0 25 22  4V  5V  6V  5HV 4HV
+   if o1
+      if o5
+         set_state slope_down_line
+         go_level 0 1
+      end_if
+   end_if
+   if o3
+      if o6
+         set_state right_line
+         go_level 0 1
+      end_if
+   end_if
+   if o7
+      if o8
+         set_state bottom_line
+         go_level 0 1
+      end_if
+   end_if
+end_if
+if fourth
+   clear_state fourth
+end_if
+if third
+   clear_state third
+   set_state fourth
+end_if
+if second
+   clear_state second
+   set_state third
+end_if
+if first
+   clear_state first
+   set_state second
 end_if
 end_anim
 
 first
 text 1 Welcome to Tic-Tac-Toe. You Go first.
+set_state first
 end_anim
 
 # Cell 1 - upper left
 tool_trigger use 8 4  14 9
-if_not c1
-   set_state c1
-   set_state p1
-   if p5
-      if_not c9
-         set_state c9
+if_not x1
+   if_not o1
+      set_state x1
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p2
-      if_not c3
-         set_state c3
+      if second
+         if x2
+            set_state o3
+            go_level 0 0
+         end_if
+         if x4
+            set_state o7
+            go_level 0 0
+         end_if
+         if x6
+            set_state o8
+            go_level 0 0
+         end_if
+         if x7
+            set_state o4
+            go_level 0 0
+         end_if
+         if x8
+            set_state o6
+            go_level 0 0
+         end_if
+         set_state o2
          go_level 0 0
       end_if
-   end_if
-   if p3
-      if_not c2
-         set_state c2
+      if third
+         if x2
+            if x4
+               set_state o7
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            if x7
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o6
+            set_state middle_line
+            go_level 0 1
+         end_if
+         if x3
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x9
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o2
+            go_level 0 0
+         end_if
+         if x4
+            set_state o8
+            set_state middle_line
+            go_level 0 1
+         end_if
+         if x6
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o7
+            set_state slope_up_line
+            go_level 0 1
+         end_if
+         if x7
+            if x8
+               set_state 4
+               go_level 0 0
+            end_if
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o3
+         set_state slope_up_line
+         go_level 0 1
+      end_if
+      if fourth
+         if x2
+            set_state o7
+            set_state slope_up_line
+            go_level 0 1
+         end_if
+         if x3
+            if x6
+               set_state o2
+               go_level 0 0
+            end_if
+            if x4
+               set_state 08
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o4
+            go_level 0 0
+         end_if
+         if x4
+            set_state o3
+            set_state slope_up_line
+            go_level 0 1
+         end_if
+         if x9
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o4
          go_level 0 0
       end_if
+      tiles 0 9 5   2  2HV 0   2V  2H
+      tiles 0 10 6     2   3   2H
+      tiles 0 10 7     2V  3V  2HV
+      tiles 0 9 8   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if p4
-      if_not c7
-         set_state c7
-         go_level 0 0
-      end_if
-   end_if
-   if p7
-      if_not c4
-         set_state c4
-         go_level 0 0
-      end_if
-   end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   tiles 0 9 5   2  2HV 0   2V  2H
-   tiles 0 10 6     2   3   2H
-   tiles 0 10 7     2V  3V  2HV
-   tiles 0 9 8   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 2 - upper center
 tool_trigger use 16 4  22 9
-if_not c2
-   set_state p2
-   set_state c2
-   if p1
-      if_not c3
-         set_state c3
+if_not x2
+   if_not o2
+      set_state x2
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p3
-      if_not c1
-         set_state c1
+      if second
+         if x1
+            set_state o3
+            go_level 0 0
+         end_if
+         if x4
+            set_state o3
+            go_level 0 0
+         end_if
+         if x5
+            set_state o8
+            go_level 0 0
+         end_if
+         if x7
+            set_state o6
+            go_level 0 0
+         end_if
+         if x9
+            set_state o4
+            go_level 0 0
+         end_if
+         set_state o1
          go_level 0 0
       end_if
-   end_if
-   if p5
-      if_not c8
-         set_state c8
-         go_level 0 0
+      if third
+         if x1
+            if x7
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o3
+            go_level 0 0
+         end_if
+         if x3
+            if x8
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x9
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x5
+               set_state o4
+               set_state left_line
+               go_level 0 1
+            end_if
+            set_state o1
+            go_level 0 0
+         end_if
+         if x4
+            if x5
+               set_state o8
+               go_level 0 0
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x5
+            if x6
+               set_state o7
+               set_state left_line
+               go_level 0 1
+            end_if
+            set_state o8
+            go_level 0 0
+         end_if
+         if x6
+            set_state o7
+            go_level 0 0
+         end_if
+         if x7
+            if x8
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o4
+            go_level 0 0
+         end_if
+         set_state o3
+         set_state slope_up_line
+         go_level 0 1
       end_if
+      if fourth
+         if x1
+            set_state o3
+            set_state slope_up_line
+            go_level 0 1
+         end_if
+         if x3
+            if x5
+               set_state o6
+               go_level 0 0
+            end_if
+            set_state o1
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x4
+            if x5
+               set_state o9
+               set_state right_line
+               go_level 0 1
+            end_if
+            if x6
+               set_state o7
+               set_state slope_up_line
+               go_level 0 1
+            end_if
+            set_state o3
+            go_level 0 0
+         end_if
+         if x5
+            set_state o8
+            go_level 0 0
+         end_if
+         if x6
+            set_state o1
+            go_level 0 0
+         end_if
+         set_state o4
+         set_state middle_line
+         go_level 0 1
+      end_if
+      tiles 0 17 5  2   2HV 0   2V  2H
+      tiles 0 18 6      2   3   2H
+      tiles 0 18 7      2V  3V  2HV
+      tiles 0 17 8  2V  2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   tiles 0 17 5  2   2HV 0   2V  2H
-   tiles 0 18 6      2   3   2H
-   tiles 0 18 7      2V  3V  2HV
-   tiles 0 17 8  2V  2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 3 - upper right
 tool_trigger use 24 4  30 9
-clear_state done
-if_not c3
-   set_state p3
-   set_state c3
-   if p5
-      if_not c7
-         set_state c7
+if_not x3
+   if_not o3
+      set_state x3
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p6
-      if_not c9
-         set_state c9
+      if second
+         if x2
+            set_state o1
+            go_level 0 0
+         end_if
+         if x4
+            set_state o8
+            go_level 0 0
+         end_if
+         if x5
+            set_state o7
+            go_level 0 0
+         end_if
+         if x6
+            set_state o9
+            go_level 0 0
+         end_if
+         if x8
+            set_state o4
+            go_level 0 0
+         end_if
+         if x9
+            set_state o6
+            go_level 0 0
+         end_if
+         set_state o2
          go_level 0 0
       end_if
-   end_if
-   if p9
-      if_not c6
-         set_state c6
+      if third
+         if x1
+            if x7
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o2
+            go_level 0 0
+         end_if
+         if x2
+            if x5
+               set_state o7
+               go_level 0 0
+            end_if
+            if x7
+               set_state o4
+               set_state middle_line
+               go_level 0 1
+            end_if
+            if x9
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x4
+            if x5
+               set_state o7
+               go_level 0 0
+            end_if
+            if x9
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o9
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         if x5
+            set_state o7
+            go_level 0 0
+         end_if
+         if x6
+            set_state o8
+            set_state center_line
+            go_level 0 1
+         end_if
+         if x7
+            if x8
+               set_state o1
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o2
+            set_state center_line
+            go_level 0 1
+         end_if
+         set_state o6
          go_level 0 0
       end_if
-   end_if
-   if p1
-      if_not c2
-         set_state c2
-         go_level 0 0
+      if fourth
+         if x1
+            if x7
+               set_state o8
+               set_state center_line
+               go_level 0 1
+            end_if
+            if x8
+               set_state o2
+               go_level 0 0
+            end_if
+            set_state o6
+            go_level 0 0
+         end_if
+         if x2
+            if x7
+               set_state o9
+               set_state slope_down_line
+               go_level 0 1
+            end_if
+            set_state o4
+            set_state left_line
+            go_level 0 1
+         end_if
+         if x4
+            if x7
+               set_state o2
+               set_state center_line
+               go_level 0 1
+            end_if
+            set_state o6
+            go_level 0 0
+         end_if
+         if x6
+            set_state o1
+            set_state slope_down_line
+            go_level 0 1
+         end_if
+         set_state o6
+         set_state middle_line
+         go_level 0 1
       end_if
+      tiles 0 25 5  2   2HV 0   2V  2H
+      tiles 0 26 6      2   3   2H
+      tiles 0 26 7      2V  3V  2HV
+      tiles 0 25 8  2V  2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if p2
-      if_not c1
-         set_state c1
-         go_level 0 0
-      end_if
-   end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   tiles 0 25 5  2   2HV 0   2V  2H
-   tiles 0 26 6      2   3   2H
-   tiles 0 26 7      2V  3V  2HV
-   tiles 0 25 8  2V  2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 4 - middle left
 tool_trigger use 8 10  14 15
-if_not c4
-   set_state p4
-   set_state c4
-   if p1
-      if_not c7
-         set_state c7
+if_not x4
+   if_not o4
+      set_state x4
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p7
-      if_not c1
-         set_state c1
-         go_level 0 0
+      if second
+
       end_if
-   end_if
-   if p5
-      if_not c6
-         set_state c6
-         go_level 0 0
+      if third
+
       end_if
+      if fourth
+
+      end_if
+      tiles 0  9 12   2  2HV 0   2V  2H
+      tiles 0 10 13      2   3   2H
+      tiles 0 10 14      2V  3V  2HV
+      tiles 0  9 15   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   tiles 0  9 12   2  2HV 0   2V  2H
-   tiles 0 10 13      2   3   2H
-   tiles 0 10 14      2V  3V  2HV
-   tiles 0  9 15   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 5 - middle center
 tool_trigger use 16 10  22 15
-if_not c5
-   set_state p5
-   set_state c5
-   if p1
-      if_not c9
-         set_state c9
-         go_level 0 0
-      end_if
-   end_if
-   if p2
-      if_not c8
-         set_state c8
-         go_level 0 0
-      end_if
-   end_if
-   if p3
-      if_not c7
-         set_state c7
-         go_level 0 0
-      end_if
-   end_if
-   if p4
-      if_not c6
-         set_state c6
-         go_level 0 0
-      end_if
-   end_if
-   if p6
-      if_not c4
-         set_state c4
-         go_level 0 0
-      end_if
-   end_if
-   if p7
-      if_not c3
-         set_state c3
-         go_level 0 0
-      end_if
-   end_if
-   if p8
-      if_not c2
-         set_state c2
-         go_level 0 0
-      end_if
-   end_if
-   if p9
-      if_not c1
-         set_state c1
-         go_level 0 0
-      end_if
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   tiles 0 17 12   2  2HV 0   2V  2H
-   tiles 0 18 13      2   3   2H
-   tiles 0 18 14      2V  3V  2HV
-   tiles 0 17 15   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
+if first
+   set_state x5
+   set_state o1
+   go_level 0 0
 end_if
 end_anim
 
 # Cell 6 - middle right
 tool_trigger use 24 10  30 15
-if_not c6
-   set_state p6
-   set_state c6
-   if p3
-      if_not c9
-         set_state c9
+if_not x6
+   if_not o6
+      set_state x6
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p9
-      if_not c3
-         set_state c3
-         go_level 0 0
+      if second
+
       end_if
-   end_if
-   if p5
-      if_not c4
-         set_state c4
-         go_level 0 0
+      if third
+
       end_if
+      if fourth
+
+      end_if
+      tiles 0 25 12   2  2HV 0   2V  2H
+      tiles 0 26 13      2   3   2H
+      tiles 0 26 14      2V  3V  2HV
+      tiles 0 25 15   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   tiles 0 25 12   2  2HV 0   2V  2H
-   tiles 0 26 13      2   3   2H
-   tiles 0 26 14      2V  3V  2HV
-   tiles 0 25 15   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 7 - lower left
 tool_trigger use 8 17  14 22
-if_not c7
-   set_state p7
-   set_state c7
-   if p1
-      if_not c4
-         set_state c4
+if_not x7
+   if_not o7
+      set_state x7
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p4
-      if_not c1
-         set_state c1
-         go_level 0 0
+      if second
+
       end_if
-   end_if
-   if p5
-      if_not c3
-         set_state c3
-         go_level 0 0
+      if third
+
       end_if
-   end_if
-   if p8
-      if_not c9
-         set_state c9
-         go_level 0 0
+      if fourth
+
       end_if
+      tiles 0  9 19   2  2HV 0   2V  2H
+      tiles 0 10 20      2   3   2H
+      tiles 0 10 21      2V  3V  2HV
+      tiles 0  9 22   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if p9
-      if_not c8
-         set_state c8
-         go_level 0 0
-      end_if
-   end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   tiles 0  9 19   2  2HV 0   2V  2H
-   tiles 0 10 20      2   3   2H
-   tiles 0 10 21      2V  3V  2HV
-   tiles 0  9 22   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 8 - lower center
 tool_trigger use 16 17  22 22
-if_not c8
-   set_state p8
-   set_state c8
-   if p5
-      if_not c2
-         set_state c2
+if_not x8
+   if_not o8
+      set_state x8
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p7
-      if_not c9
-         set_state c9
-         go_level 0 0
+      if second
+
       end_if
-   end_if
-   if p9
-      if_not c7
-         set_state c7
-         go_level 0 0
+      if third
+
       end_if
+      if fourth
+
+      end_if
+      tiles 0 17 19   2  2HV 0   2V  2H
+      tiles 0 18 20      2   3   2H
+      tiles 0 18 21      2V  3V  2HV
+      tiles 0 17 22   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c9
-      set_state c9
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   tiles 0 17 19   2  2HV 0   2V  2H
-   tiles 0 18 20      2   3   2H
-   tiles 0 18 21      2V  3V  2HV
-   tiles 0 17 22   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
 end_if
 end_anim
 
 # Cell 9 - lower right
 tool_trigger use 24 17  30 22
-if_not c9
-   set_state p9
-   set_state c9
-   if p3
-      if_not c6
-         set_state c6
+if_not x9
+   if_not o9
+      set_state x9
+      if first
+         set_state o5
          go_level 0 0
       end_if
-   end_if
-   if p5
-      if_not c1
-         set_state c1
-         go_level 0 0
+      if second
+
       end_if
-   end_if
-   if p6
-      if_not c3
-         set_state c3
-         go_level 0 0
+      if third
+
       end_if
-   end_if
-   if p7
-      if_not c8
-         set_state c8
-         go_level 0 0
+      if fourth
+
       end_if
+      tiles 0 25 19   2  2HV 0   2V  2H
+      tiles 0 26 20      2   3   2H
+      tiles 0 26 21      2V  3V  2HV
+      tiles 0 25 22   2V 2H  0   2   2HV
+      text 1 Another draw. Perhaps the only
+      text 1 way to win is not to play.
+      wait 120
+      text 1 How about a nice game of chess?
    end_if
-   if p8
-      if_not c7
-         set_state c7
-         go_level 0 0
-      end_if
-   end_if
-   if_not c5
-      set_state c5
-      go_level 0 0
-   end_if
-   if_not c1
-      set_state c1
-      go_level 0 0
-   end_if
-   if_not c3
-      set_state c3
-      go_level 0 0
-   end_if
-   if_not c7
-      set_state c7
-      go_level 0 0
-   end_if
-   if_not c6
-      set_state c6
-      go_level 0 0
-   end_if
-   if_not c8
-      set_state c8
-      go_level 0 0
-   end_if
-   if_not c2
-      set_state c2
-      go_level 0 0
-   end_if
-   if_not c4
-      set_state c4
-      go_level 0 0
-   end_if
-   tiles 0 25 19   2  2HV 0   2V  2H
-   tiles 0 26 20      2   3   2H
-   tiles 0 26 21      2V  3V  2HV
-   tiles 0 25 22   2V 2H  0   2   2HV
-   text 1 Another draw. Perhaps the only
-   text 1 way to win is not to play.
-   wait 120
-   text 1 How about a nice game of chess?
-end_if
 end_anim

@@ -21,131 +21,113 @@ tiles 0 15 20  1 0 0 0 0 0 0 0 1
 tiles 0 15 21  1 0 0 0 0 0 0 0 1
 tiles 0 15 22  1 0 0 0 0 0 0 0 1
 tiles 0 15 23  1 0 0 0 0 0 0 0 1
-if c1
-   if p1
-      tiles 0 9 5   2  2HV 0   2V  2H
-      tiles 0 10 6     2   3   2H
-      tiles 0 10 7     2V  3V  2HV
-      tiles 0 9 8   2V 2H  0   2   2HV
-   end_if
-   if_not p1
-      tiles 0 9 5  4   5   6   5H  4H
-      tiles 0 9 6  7   8   0   8H  7H
-      tiles 0 9 7  7V  8V  0   8HV 7HV
-      tiles 0 9 8  4V  5V  6V  5HV 4HV
-   end_if
+if x1
+   tiles 0 9 5   2  2HV 0   2V  2H
+   tiles 0 10 6     2   3   2H
+   tiles 0 10 7     2V  3V  2HV
+   tiles 0 9 8   2V 2H  0   2   2HV
 end_if
-if c2
-   if p2
-      tiles 0 17 5  2   2HV 0   2V  2H
-      tiles 0 18 6      2   3   2H
-      tiles 0 18 7      2V  3V  2HV
-      tiles 0 17 8  2V  2H  0   2   2HV
-   end_if
-   if_not p2
-      tiles 0 17 5  4   5   6   5H  4H
-      tiles 0 17 6  7   8   0   8H  7H
-      tiles 0 17 7  7V  8V  0   8HV 7HV
-      tiles 0 17 8  4V  5V  6V  5HV 4HV
-   end_if
+if o1
+   tiles 0 9 5  4   5   6   5H  4H
+   tiles 0 9 6  7   8   0   8H  7H
+   tiles 0 9 7  7V  8V  0   8HV 7HV
+   tiles 0 9 8  4V  5V  6V  5HV 4HV
 end_if
-if c3
-   if p3
+if x2
+   tiles 0 17 5  2   2HV 0   2V  2H
+   tiles 0 18 6      2   3   2H
+   tiles 0 18 7      2V  3V  2HV
+   tiles 0 17 8  2V  2H  0   2   2HV
+end_if
+if o2
+   tiles 0 17 5  4   5   6   5H  4H
+   tiles 0 17 6  7   8   0   8H  7H
+   tiles 0 17 7  7V  8V  0   8HV 7HV
+   tiles 0 17 8  4V  5V  6V  5HV 4HV
+end_if
+if x3
    tiles 0 25 5  2   2HV 0   2V  2H
    tiles 0 26 6      2   3   2H
    tiles 0 26 7      2V  3V  2HV
    tiles 0 25 8  2V  2H  0   2   2HV
-   end_if
-   if_not p3
-      tiles 0 25 5  4   5   6   5H  4H
-      tiles 0 25 6  7   8   0   8H  7H
-      tiles 0 25 7  7V  8V  0   8HV 7HV
-      tiles 0 25 8  4V  5V  6V  5HV 4HV
-   end_if
 end_if
-if c4
-   if p4
-      tiles 0  9 12   2  2HV 0   2V  2H
-      tiles 0 10 13      2   3   2H
-      tiles 0 10 14      2V  3V  2HV
-      tiles 0  9 15   2V 2H  0   2   2HV
-   end_if
-   if_not p4
-      tiles 0 9 12  4   5   6   5H  4H
-      tiles 0 9 13  7   8   0   8H  7H
-      tiles 0 9 14  7V  8V  0   8HV 7HV
-      tiles 0 9 15  4V  5V  6V  5HV 4HV
-   end_if
+if o3
+   tiles 0 25 5  4   5   6   5H  4H
+   tiles 0 25 6  7   8   0   8H  7H
+   tiles 0 25 7  7V  8V  0   8HV 7HV
+   tiles 0 25 8  4V  5V  6V  5HV 4HV
 end_if
-if c5
-   if p5
-      tiles 0 17 12   2  2HV 0   2V  2H
-      tiles 0 18 13      2   3   2H
-      tiles 0 18 14      2V  3V  2HV
-      tiles 0 17 15   2V 2H  0   2   2HV
-   end_if
-   if_not p5
-      tiles 0 17 12  4   5   6   5H  4H
-      tiles 0 17 13  7   8   0   8H  7H
-      tiles 0 17 14  7V  8V  0   8HV 7HV
-      tiles 0 17 15  4V  5V  6V  5HV 4HV
-   end_if
+if x4
+   tiles 0  9 12   2  2HV 0   2V  2H
+   tiles 0 10 13      2   3   2H
+   tiles 0 10 14      2V  3V  2HV
+   tiles 0  9 15   2V 2H  0   2   2HV
 end_if
-if c6
-   if p6
-      tiles 0 25 12   2  2HV 0   2V  2H
-      tiles 0 26 13      2   3   2H
-      tiles 0 26 14      2V  3V  2HV
-      tiles 0 25 15   2V 2H  0   2   2HV
-   end_if
-   if_not p6
-      tiles 0 25 12  4   5   6   5H  4H
-      tiles 0 25 13  7   8   0   8H  7H
-      tiles 0 25 14  7V  8V  0   8HV 7HV
-      tiles 0 25 15  4V  5V  6V  5HV 4HV
-   end_if
+if o4
+   tiles 0 9 12  4   5   6   5H  4H
+   tiles 0 9 13  7   8   0   8H  7H
+   tiles 0 9 14  7V  8V  0   8HV 7HV
+   tiles 0 9 15  4V  5V  6V  5HV 4HV
 end_if
-if c7
-   if p7
-      tiles 0  9 19   2  2HV 0   2V  2H
-      tiles 0 10 20      2   3   2H
-      tiles 0 10 21      2V  3V  2HV
-      tiles 0  9 22   2V 2H  0   2   2HV
-   end_if
-   if_not p7
-      tiles 0 9 19  4   5   6   5H  4H
-      tiles 0 9 20  7   8   0   8H  7H
-      tiles 0 9 21  7V  8V  0   8HV 7HV
-      tiles 0 9 22  4V  5V  6V  5HV 4HV
-   end_if
+if x5
+   tiles 0 17 12   2  2HV 0   2V  2H
+   tiles 0 18 13      2   3   2H
+   tiles 0 18 14      2V  3V  2HV
+   tiles 0 17 15   2V 2H  0   2   2HV
 end_if
-if c8
-   if p8
-      tiles 0 17 19   2  2HV 0   2V  2H
-      tiles 0 18 20      2   3   2H
-      tiles 0 18 21      2V  3V  2HV
-      tiles 0 17 22   2V 2H  0   2   2HV
-   end_if
-   if_not p8
-      tiles 0 17 19  4   5   6   5H  4H
-      tiles 0 17 20  7   8   0   8H  7H
-      tiles 0 17 21  7V  8V  0   8HV 7HV
-      tiles 0 17 22  4V  5V  6V  5HV 4HV
-   end_if
+if o5
+   tiles 0 17 12  4   5   6   5H  4H
+   tiles 0 17 13  7   8   0   8H  7H
+   tiles 0 17 14  7V  8V  0   8HV 7HV
+   tiles 0 17 15  4V  5V  6V  5HV 4HV
 end_if
-if c9
-   if p9
-      tiles 0 25 19   2  2HV 0   2V  2H
-      tiles 0 26 20      2   3   2H
-      tiles 0 26 21      2V  3V  2HV
-      tiles 0 25 22   2V 2H  0   2   2HV
-   end_if
-   if_not p9
-      tiles 0 25 19  4   5   6   5H  4H
-      tiles 0 25 20  7   8   0   8H  7H
-      tiles 0 25 21  7V  8V  0   8HV 7HV
-      tiles 0 25 22  4V  5V  6V  5HV 4HV
-   end_if
+if x6
+   tiles 0 25 12   2  2HV 0   2V  2H
+   tiles 0 26 13      2   3   2H
+   tiles 0 26 14      2V  3V  2HV
+   tiles 0 25 15   2V 2H  0   2   2HV
+end_if
+if o6
+   tiles 0 25 12  4   5   6   5H  4H
+   tiles 0 25 13  7   8   0   8H  7H
+   tiles 0 25 14  7V  8V  0   8HV 7HV
+   tiles 0 25 15  4V  5V  6V  5HV 4HV
+end_if
+if x7
+   tiles 0  9 19   2  2HV 0   2V  2H
+   tiles 0 10 20      2   3   2H
+   tiles 0 10 21      2V  3V  2HV
+   tiles 0  9 22   2V 2H  0   2   2HV
+end_if
+if o7
+   tiles 0 9 19  4   5   6   5H  4H
+   tiles 0 9 20  7   8   0   8H  7H
+   tiles 0 9 21  7V  8V  0   8HV 7HV
+   tiles 0 9 22  4V  5V  6V  5HV 4HV
+end_if
+if x8
+   tiles 0 17 19   2  2HV 0   2V  2H
+   tiles 0 18 20      2   3   2H
+   tiles 0 18 21      2V  3V  2HV
+   tiles 0 17 22   2V 2H  0   2   2HV
+end_if
+if o8
+   tiles 0 17 19  4   5   6   5H  4H
+   tiles 0 17 20  7   8   0   8H  7H
+   tiles 0 17 21  7V  8V  0   8HV 7HV
+   tiles 0 17 22  4V  5V  6V  5HV 4HV
+end_if
+if x9
+   tiles 0 25 19   2  2HV 0   2V  2H
+   tiles 0 26 20      2   3   2H
+   tiles 0 26 21      2V  3V  2HV
+   tiles 0 25 22   2V 2H  0   2   2HV
+end_if
+if o9
+   tiles 0 25 19  4   5   6   5H  4H
+   tiles 0 25 20  7   8   0   8H  7H
+   tiles 0 25 21  7V  8V  0   8HV 7HV
+   tiles 0 25 22  4V  5V  6V  5HV 4HV
 end_if
 wait 30
 if top_line
