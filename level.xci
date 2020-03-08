@@ -285,7 +285,7 @@ if_not x1
          end_if
          if x7
             if x8
-               set_state 4
+               set_state o4
                go_level 0 0
             end_if
             set_state o2
@@ -298,6 +298,11 @@ if_not x1
       end_if
       if fourth
          if x2
+            if x7
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
             set_state o7
             set_state slope_up_line
             go_level 0 1
@@ -308,6 +313,11 @@ if_not x1
                go_level 0 0
             end_if
             if x8
+               if x9
+                  set_state o4
+                  set_state middle_line
+                  go_level 0 1
+               end_if
                set_state o2
                go_level 0 0
             end_if
@@ -444,6 +454,11 @@ if_not x2
       end_if
       if fourth
          if x1
+            if x7
+               set_state o6
+               set_state middle_line
+               go_level 0 1
+            end_if
             set_state o3
             set_state slope_up_line
             go_level 0 1
@@ -452,6 +467,11 @@ if_not x2
             if x5
                set_state o8
                go_level 0 0
+            end_if
+            if x9
+               set_state o4
+               set_state middle_line
+               go_level 0 1
             end_if
             set_state o1
             set_state slope_down_line
@@ -610,6 +630,11 @@ if_not x3
       if fourth
          if x1
             if x7
+               if x8
+                  set_state o6
+                  set_state middle_line
+                  go_level 0 1
+               end_if
                set_state o8
                set_state center_line
                go_level 0 1
@@ -631,6 +656,11 @@ if_not x3
                go_level 0 0
             end_if
             if x7
+               if x9
+                  set_state o6
+                  set_state middle_line
+                  go_level 0 1
+               end_if
                set_state o9
                set_state slope_down_line
                go_level 0 1
@@ -850,8 +880,7 @@ if_not x4
                go_level 0 1
             end_if
             set_state o1
-            set_state slope_down_line
-            go_level 0 1
+            go_level 0 0
          end_if
          if x5
             set_state o6
@@ -1166,7 +1195,7 @@ if_not x7
                go_level 0 0
             end_if
             if x9
-               set_state o4
+               set_state o6
                set_state middle_line
                go_level 0 1
             end_if

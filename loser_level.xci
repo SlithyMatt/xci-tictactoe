@@ -207,46 +207,46 @@ if right_line
 end_if
 if slope_down_line
    tiles 0  8 4  9 9HV
-   tiles 0  9 5  9 9HV
-   tiles 0  10 6  9 9HV
-   tiles 0  11 7  9 9HV
-   tiles 0  12 8  9 9HV
+   tiles 0  9 5  9 11HV
+   tiles 0  10 6  12 9HV
+   tiles 0  11 7  9 12HV
+   tiles 0  12 8  11 9HV
    tiles 0  13 9  9 9HV
-   tiles 0  14 10  9 9HV
-   tiles 0  15 11  9 9HV
-   tiles 0  16 12  9 9HV
-   tiles 0  17 13  9 9HV
-   tiles 0  18 14  9 9HV
-   tiles 0  19 15  9 9HV
+   tiles 0  14 10  10 10HV
+   tiles 0  15 11  10 9HV
+   tiles 0  16 12  9 13HV
+   tiles 0  17 13  14 15HV
+   tiles 0  18 14  16 9HV
+   tiles 0  19 15  17 18HV
    tiles 0  20 16  9 9HV
-   tiles 0  21 17  9 9HV
-   tiles 0  22 18  9 9HV
-   tiles 0  23 19  9 9HV
-   tiles 0  24 20  9 9HV
-   tiles 0  25 21  9 9HV
-   tiles 0  26 22  9 9HV
+   tiles 0  21 17  10 10HV
+   tiles 0  22 18  9 10HV
+   tiles 0  23 19  10 9HV
+   tiles 0  24 20  9 12HV
+   tiles 0  25 21  19 19HV
+   tiles 0  26 22  20 21HV
    tiles 0  27 23  9 9HV
 end_if
 if slope_up_line
    tiles 0  27 4  9V 9H
-   tiles 0  26 5  9V 9H
-   tiles 0  25 6  9V 9H
-   tiles 0  24 7  9V 9H
-   tiles 0  23 8  9V 9H
-   tiles 0  22 9  9V 9H
-   tiles 0  21 10  9V 9H
+   tiles 0  26 5  20V 21H
+   tiles 0  25 6  19V 19H
+   tiles 0  24 7  9V 12H
+   tiles 0  23 8  10V 9H
+   tiles 0  22 9  9V 10H
+   tiles 0  21 10  10V 10H
    tiles 0  20 11  9V 9H
-   tiles 0  19 12  9V 9H
-   tiles 0  18 13  9V 9H
-   tiles 0  17 14  9V 9H
-   tiles 0  16 15  9V 9H
-   tiles 0  15 16  9V 9H
-   tiles 0  14 17  9V 9H
+   tiles 0  19 12  17V 18H
+   tiles 0  18 13  22V 9H
+   tiles 0  17 14  14V 15H
+   tiles 0  16 15  9V 13H
+   tiles 0  15 16  10V 9H
+   tiles 0  14 17  10V 10H
    tiles 0  13 18  9V 9H
-   tiles 0  12 19  9V 9H
-   tiles 0  11 20  9V 9H
-   tiles 0  10 21  9V 9H
-   tiles 0  9 22  9V 9H
+   tiles 0  12 19  11V 9H
+   tiles 0  11 20  9V 12H
+   tiles 0  10 21  12V 9H
+   tiles 0  9 22  9V 11H
    tiles 0  8 23  9V 9H
 end_if
 wait 60
