@@ -178,21 +178,24 @@ if o9
       end_if
    end_if
 end_if
-if fourth
-   clear_state fourth
+if advanced
+   if fourth
+      clear_state fourth
+   end_if
+   if third
+      clear_state third
+      set_state fourth
+   end_if
+   if second
+      clear_state second
+      set_state third
+   end_if
+   if first
+      clear_state first
+      set_state second
+   end_if
 end_if
-if third
-   clear_state third
-   set_state fourth
-end_if
-if second
-   clear_state second
-   set_state third
-end_if
-if first
-   clear_state first
-   set_state second
-end_if
+set_state advanced
 end_anim
 
 first
@@ -346,7 +349,12 @@ if_not x1
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -511,7 +519,12 @@ if_not x2
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -704,7 +717,12 @@ if_not x3
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -907,7 +925,12 @@ if_not x4
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -916,6 +939,10 @@ tool_trigger use 16 10  22 15
 if first
    set_state x5
    set_state o1
+   go_level 0 0
+end_if
+if_not draw
+   clear_state advanced
    go_level 0 0
 end_if
 end_anim
@@ -1124,7 +1151,12 @@ if_not x6
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -1319,7 +1351,12 @@ if_not x7
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -1511,7 +1548,12 @@ if_not x8
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
 end_if
 end_anim
 
@@ -1753,5 +1795,11 @@ if_not x9
       text 1 way to win is not to play.
       wait 120
       text 1 How about a nice game of chess?
+      set_state draw
    end_if
+end_if
+if_not draw
+   clear_state advanced
+   go_level 0 0
+end_if
 end_anim
